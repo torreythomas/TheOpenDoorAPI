@@ -14,17 +14,17 @@ module.exports = {
         Jobs.create(newJobs).then(jobs => res.json(jobs));
     },
     show: (req,res) => {
-        Jobs.findOne({name: req.params.name}).then(jobs =>
+        Jobs.findOne({company: req.params.company}).then(jobs =>
             res.json(jobs));
     },
     update: (req,res) => {
         const updatedJobs = req.body;
 
-        Jobs.findOneAndUpdate({name: req.params.name}, updatedJobs, {
+        Jobs.findOneAndUpdate({company: req.params.company}, updatedJobs, {
             new: true
         }).then(jobs => res.json(jobs));
     },
     destroy: (req,res) => {
-        Jobs.findOneAndDelete({name: req.params.name}).then(jobs => res.json(jobs));
+        Jobs.findOneAndDelete({company: req.params.company}).then(jobs => res.json(jobs));
     }
 }

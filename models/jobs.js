@@ -5,13 +5,15 @@ const jobsSchema = new Schema ({
     id: String,
     type: String,
     company: String,
-    url: String,
+    company_url: String,
     location: String,
     title: String,
     description: String,
-    apply: String,
-    logo: String 
+    how_to_apply: String,
+    company_logo: String 
 });
 
 const Jobs = mongoose.model("Jobs", jobsSchema);
 module.exports = Jobs;
+
+

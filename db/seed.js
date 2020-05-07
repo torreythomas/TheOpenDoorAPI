@@ -1,24 +1,25 @@
-const Jobs = require("../models/jobs");
+const jobs = require("../models/jobs");
 const data = require("./data.json");
 
 
-let JobsData =  data.map(jobs => {
+
+let jobsData =  data.map(jobs => {
     let myData = {
         id: jobs.id,
         type: jobs.type,
         company: jobs.company,
-        url: jobs.url,
+        company_url: jobs.company_url,
         location: jobs.location,
         title: jobs.title,
         description: jobs.description,
-        apply: jobs.apply,
-        logo: jobs.logo
+        how_to_apply: jobs.how_to_apply,
+        company_logo: jobs.company_logo
     };
 return myData;
 });
 
-Jobs.deleteMany({}).then(jobs => {
-    jobs.collection.insert(JobsData).then(jobs => {
-        console.log(jobs);
+jobs.remove({}).then(x => {
+   jobs.collection.insert(jobsData).then(x => {
+        console.log(x);
     });
 });
