@@ -7,7 +7,7 @@ app.use(cors());
 app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 
-const jobsRouter = require("./routes/countries");
+const jobsRouter = require("./routes/jobs");
 
 app.use("/jobs", jobsRouter);
 
