@@ -17,7 +17,7 @@ let JobsData =  data.map(jobs => {
 return myData;
 });
 
-Jobs.remove({}).then(jobs => {
+Jobs.deleteMany({}).then(jobs => {
     jobs.collection.insert(JobsData).then(jobs => {
         console.log(jobs);
     });
