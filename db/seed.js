@@ -1,4 +1,4 @@
-const Jobs = require("../models/countries");
+const Jobs = require("../models/jobs");
 const data = require("./data.json");
 
 
