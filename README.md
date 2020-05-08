@@ -14,6 +14,7 @@
 * [Mongo Atlas](https://www.mongodb.com/cloud/atlas)
 * [Express](https://expressjs.com/)
 * [Heroku](https://heroku.com)
+* [Swagger](https://swagger.io/)
 
 
 # Installation Instructions
